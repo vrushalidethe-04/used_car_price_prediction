@@ -1,0 +1,6 @@
+Used Car Price Prediction - Model Evaluation
+============================================
+MAE  : 24246.50
+MSE  : 792204431.21
+RMSE : 28146.13
+R2 Score : 0.9786
