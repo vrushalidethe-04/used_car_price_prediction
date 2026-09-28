@@ -4,191 +4,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoPrice AI</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <div class="logo">🚗 AutoPrice <span>AI</span></div>
+<header>
+    <div class="logo">🚗 AutoPrice AI</div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#predict">Predict</a>
-            <a href="#about">About</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#predict">Predict</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
 
+<section id="home" class="hero">
+    <div>
+        <p class="tag">AI POWERED CAR VALUATION</p>
 
-    <section id="home" class="hero">
+        <h1>
+            Know Your Car's
+            <span>True Value.</span>
+        </h1>
 
-        <div class="hero-content">
+        <p>
+            Enter your car details to predict its estimated
+            selling price using Machine Learning.
+        </p>
 
-            <p class="tag">AI POWERED CAR VALUATION</p>
+        <a href="#predict" class="hero-button">
+            Predict Car Price →
+        </a>
+    </div>
 
-            <h1>
-                Know Your Car's
-                <span>True Value.</span>
-            </h1>
-
-            <p>
-                Predict the selling price of a used car using
-                Machine Learning based on car age, mileage,
-                engine capacity and other details.
-            </p>
-
-            <a href="#predict" class="hero-button">
-                Predict Car Price →
-            </a>
-
-        </div>
-
-        <div class="car">
-            🚘
-        </div>
-
-    </section>
+    <div class="car">🚘</div>
+</section>
 
 
-    <section id="predict" class="prediction-section">
+<section id="predict" class="prediction-section">
 
-        <div class="heading">
+    <div class="heading">
+        <h2>Used Car Price Predictor</h2>
 
-            <p class="tag">SMART PREDICTION</p>
+        <p>
+            Enter the car's details to predict the estimated selling price.
+        </p>
+    </div>
 
-            <h2>Enter Car Details</h2>
+    <div class="card">
 
-            <p>
-                Fill in the details below to get an estimated
-                used car selling price.
-            </p>
+        <form id="predictionForm">
 
-        </div>
+            <div class="form-grid">
 
-
-        <div class="card">
-
-            <form id="predictionForm">
-
-                <div class="form-grid">
-
-                    <div>
-                        <label>Car Age</label>
-                        <input type="number" id="Car_Age" required>
-                    </div>
-
-                    <div>
-                        <label>Kilometers Driven</label>
-                        <input type="number" id="Kilometers_Driven" required>
-                    </div>
-
-                    <div>
-                        <label>Engine Capacity (cc)</label>
-                        <input type="number" id="Engine_Capacity" required>
-                    </div>
-
-                    <div>
-                        <label>Mileage (km/l)</label>
-                        <input type="number" step="0.1" id="Mileage" required>
-                    </div>
-
-                    <div>
-                        <label>Previous Owners</label>
-
-                        <select id="Previous_Owners" required>
-                            <option value="">Select</option>
-                            <option value="1">1 Owner</option>
-                            <option value="2">2 Owners</option>
-                            <option value="3">3 Owners</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>Fuel Type</label>
-
-                        <select id="Fuel_Type" required>
-                            <option value="">Select</option>
-                            <option value="Petrol">Petrol</option>
-                            <option value="Diesel">Diesel</option>
-                            <option value="CNG">CNG</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>Transmission</label>
-
-                        <select id="Transmission" required>
-                            <option value="">Select</option>
-                            <option value="Manual">Manual</option>
-                            <option value="Automatic">Automatic</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label>Car Brand</label>
-
-                        <select id="Car_Brand" required>
-                            <option value="">Select</option>
-                            <option value="Maruti">Maruti</option>
-                            <option value="Hyundai">Hyundai</option>
-                            <option value="Tata">Tata</option>
-                            <option value="Honda">Honda</option>
-                            <option value="Toyota">Toyota</option>
-                            <option value="Mahindra">Mahindra</option>
-                            <option value="Kia">Kia</option>
-                            <option value="Renault">Renault</option>
-                        </select>
-                    </div>
-
+                <div class="input-box">
+                    <label>Car Age (years)</label>
+                    <input type="number" id="Car_Age" min="0" max="30" value="5" required>
                 </div>
 
+                <div class="input-box">
+                    <label>Kilometers Driven</label>
+                    <input type="number" id="Kilometers_Driven" value="50000" required>
+                </div>
 
-                <button type="submit">
-                    🔍 Predict Selling Price
-                </button>
+                <div class="input-box">
+                    <label>Engine Capacity (cc)</label>
+                    <input type="number" id="Engine_Capacity" value="1200" required>
+                </div>
 
-            </form>
+                <div class="input-box">
+                    <label>Mileage (km/l)</label>
+                    <input type="number" id="Mileage" step="0.1" value="18.5" required>
+                </div>
 
+                <div class="input-box">
+                    <label>Previous Owners</label>
+                    <select id="Previous_Owners" required>
+                        <option value="1">1 Owner</option>
+                        <option value="2">2 Owners</option>
+                        <option value="3">3 Owners</option>
+                    </select>
+                </div>
 
-            <div id="result" class="result">
+                <div class="input-box">
+                    <label>Fuel Type</label>
+                    <select id="Fuel_Type" required>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="CNG">CNG</option>
+                    </select>
+                </div>
 
-                <p>ESTIMATED SELLING PRICE</p>
+                <div class="input-box">
+                    <label>Transmission</label>
+                    <select id="Transmission" required>
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                    </select>
+                </div>
 
-                <h2 id="predictedPrice">₹ 0</h2>
-
-                <span id="resultMessage">
-                    Enter car details and click predict.
-                </span>
+                <div class="input-box">
+                    <label>Car Brand</label>
+                    <select id="Car_Brand" required>
+                        <option value="Maruti">Maruti</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Tata">Tata</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Mahindra">Mahindra</option>
+                        <option value="Kia">Kia</option>
+                        <option value="Renault">Renault</option>
+                    </select>
+                </div>
 
             </div>
 
+            <button type="submit">
+                🔍 Predict Selling Price
+            </button>
+
+        </form>
+
+
+        <div id="result" class="result">
+
+            <p>ESTIMATED SELLING PRICE</p>
+
+            <h2 id="predictedPrice">₹ 0</h2>
+
+            <span id="resultMessage">
+                Enter car details and click predict.
+            </span>
+
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <section id="about" class="about">
+<section id="about" class="about">
 
-        <p class="tag">ABOUT PROJECT</p>
+    <p class="tag">ABOUT PROJECT</p>
 
-        <h2>Machine Learning Powered Valuation</h2>
+    <h2>Machine Learning Powered Valuation</h2>
 
-        <p>
-            This project uses Machine Learning to estimate
-            the selling price of used cars using important
-            car features.
-        </p>
+    <p>
+        AutoPrice AI uses Machine Learning to estimate the selling
+        price of used cars based on important vehicle features.
+    </p>
 
-    </section>
-
-
-    <footer>
-        <p>© 2026 AutoPrice AI | Used Car Price Prediction</p>
-    </footer>
+</section>
 
 
-    <script src="script.js"></script>
+<footer>
+    <p>© 2026 AutoPrice AI | Used Car Price Prediction</p>
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
 </html>
